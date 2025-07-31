@@ -1,8 +1,11 @@
+import { FlipWords } from "@/components/ui/flip-words";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 
 
 
 export default function Home() {
+  const words = ["Full Stack Developer", "UX/UI Designer", "Marketing Specialist"];
   return (
     <>
 
@@ -11,9 +14,14 @@ export default function Home() {
           <h1 className="text-8xl md:text-9xl font-bold tracking-tighter">
             Hello.
           </h1>
-          <h1 className="text-8xl md:text-9xl font-bold tracking-tighter">
-            I am Lenin
-          </h1>
+          <PointerHighlight
+            rectangleClassName="border-neutral-300 dark:border-neutral-300"
+            pointerClassName="text-white"
+          >
+            <h1 className="text-8xl md:text-9xl font-bold tracking-tighter">
+              I am Lenin
+            </h1>
+          </PointerHighlight>
         </div>
 
         <div className="flex items-center mt-8 md:mt-16">
@@ -32,9 +40,10 @@ export default function Home() {
             ></path>
           </svg>
           <div>
-            <p className="text-lg md:text-xl">Developer</p>
+            <FlipWords className="text-lg md:text-2xl text-white" words={words} />
+            {/* <p className="text-lg md:text-xl">Full Stack Developer</p>
             <p className="text-lg md:text-xl">UX/UI Designer</p>
-            <p className="text-lg md:text-xl">Marketing Specialist</p>
+            <p className="text-lg md:text-xl">Marketing Specialist</p> */}
           </div>
         </div>
       </main>
