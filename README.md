@@ -1,5 +1,44 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Configuración del Formulario de Contacto
+
+El formulario de contacto está configurado para enviar correos electrónicos utilizando Nodemailer. Para que funcione correctamente, debes seguir estos pasos:
+
+### 1. Configurar las variables de entorno
+
+Edita el archivo `.env.local` en la raíz del proyecto y configura las siguientes variables:
+
+```
+EMAIL_USER=tu_correo@gmail.com
+EMAIL_PASSWORD=tu_contraseña_o_contraseña_de_aplicacion
+EMAIL_RECIPIENT=tu_correo@gmail.com
+```
+
+### 2. Configuración para Gmail
+
+Si estás utilizando Gmail, debes generar una "contraseña de aplicación" en lugar de usar tu contraseña normal:
+
+1. Ve a tu cuenta de Google
+2. Selecciona "Seguridad"
+3. En "Acceso a Google", selecciona "Verificación en dos pasos"
+4. En la parte inferior, selecciona "Contraseñas de aplicaciones"
+5. Genera una nueva contraseña para la aplicación
+6. Usa esta contraseña en la variable `EMAIL_PASSWORD`
+
+### 3. Otros proveedores de correo
+
+Si deseas utilizar otro proveedor de correo electrónico, edita el archivo `src/app/api/contact/route.ts` y modifica la configuración del transporte de Nodemailer según sea necesario.
+
+```typescript
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // Cambia a 'outlook', 'yahoo', etc.
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
+  },
+});
+```
+
 ## Getting Started
 
 First, run the development server:
