@@ -3,6 +3,26 @@ import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 
 
+export async function generateMetadata() {
+
+  return {
+    title: `Lenin Portfolio`,
+    description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+    openGraph: {
+      title: `Lenin Portfolio`,
+      description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+      images: ["/og-image.png"],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Lenin Portfolio`,
+      description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+      images: ["/og-image.png"],
+    },
+  };
+}
+
+
 
 export default function Home() {
   const words = ["Full Stack Developer", "UX/UI Designer", "Marketing Specialist"];

@@ -1,6 +1,25 @@
 import Projects from "@/components/Projects";
 import projectsData from "@/data/projects";
 
+// Metadata for the work page
+export async function generateMetadata() {
+  return {
+    title: `Work | Lenin Portfolio`,
+    description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+    openGraph: {
+      title: `Work | Lenin Portfolio`,
+      description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+      images: ["/og-image.png"],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Work | Lenin Portfolio`,
+      description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+      images: ["/og-image.png"],
+    },
+  };
+}
+
 // Usamos los datos importados del archivo JSON
 const projects = projectsData;
 

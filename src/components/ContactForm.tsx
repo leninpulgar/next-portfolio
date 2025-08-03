@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from 'react';
+import { Button } from './ui/stateful-button';
 
 export default function ContactForm({ className }: { className?: string }) {
   const [formData, setFormData] = useState({
@@ -107,19 +108,23 @@ export default function ContactForm({ className }: { className?: string }) {
         ></textarea>
       </div>
       
-      {status.message && (
+      {/* {status.message && (
         <div className={`text-sm ${status.type === 'error' ? 'text-red-500' : status.type === 'success' ? 'text-green-500' : 'text-blue-500'}`}>
           {status.message}
         </div>
-      )}
+      )} */}
       
-      <button 
+      {/* <button 
         type="submit" 
         className="text-lg font-medium hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={status.type === 'sending'}
       >
         {status.type === 'sending' ? 'Enviando...' : 'Enviar'}
-      </button>
+      </button> */}
+
+      <Button type="submit" disabled={status.type === 'sending'}>
+        {status.type === 'sending' ? 'Enviando...' : 'Enviar'}
+      </Button>
     </form>
   );
 }

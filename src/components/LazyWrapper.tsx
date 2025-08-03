@@ -18,7 +18,7 @@ const [isLoaded, setIsLoaded] = useState(false);
 useEffect(() => {
   const timer = setTimeout(() => {
     setIsLoaded(true);
-  }, 3000);
+  }, 1000);
 
   return () => clearTimeout(timer);
 }, []);

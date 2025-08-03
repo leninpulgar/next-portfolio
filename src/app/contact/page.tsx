@@ -1,5 +1,24 @@
 import ContactForm from "@/components/ContactForm";
 
+// Metadata for the contact page
+export async function generateMetadata() {
+  return {
+    title: `Contact | Lenin Portfolio`,
+    description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+    openGraph: {
+      title: `Contact | Lenin Portfolio`,
+      description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+      images: ["/og-image.png"],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Contact | Lenin Portfolio`,
+      description: "Lenin Portfolio | Full Stack Developer, UX/UI Designer, Marketing Specialist",
+      images: ["/og-image.png"],
+    },
+  };
+}
+
 
 export default function Contact() {
   return (
