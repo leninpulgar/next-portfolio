@@ -2,9 +2,9 @@
 import Projects from "@/components/Projects";
 
 // Importamos los datos desde el archivo TypeScript
-import projectsData from "@/data/projects.ts";
+import projectsData from "@/data/projects";
 // También podríamos importar el tipo si lo necesitamos
-import { Project } from "@/data/projects.ts";
+import { Project } from "@/data/projects";
 
 // Podemos usar los datos directamente
 const projects = projectsData;

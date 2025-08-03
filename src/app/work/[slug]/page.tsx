@@ -7,8 +7,13 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { LinkPreview } from "@/components/ui/link-preview";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = projectsData.find((p) => p.slug === params.slug);
+interface Props {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: Props) {
+  const  slug  = (await params).slug;
+  const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) {
     return {
@@ -41,8 +46,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetail({ params }: { params: { slug: string } }) {
-  const project = projectsData.find((p) => p.slug === params.slug);
+export default async function ProjectDetail({ params }: Props) {
+  const  slug  = (await params).slug;
+  const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) return notFound();
 
