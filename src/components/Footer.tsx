@@ -14,30 +14,30 @@ const Footer = () => {
           <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-3 gap-16">
             {/* 1/3 (col 1 de 3) */}
             <div className="md:col-span-1">
-                <div className="mb-4 mr-0 md:mr-4">
+              <div className="mb-4 mr-0 md:mr-4">
                 <h2 className="text-4xl">Contact</h2>
-                </div>
-                <div className="ml-2 mt-2">
+              </div>
+              <div className="ml-2 mt-2">
                 <ul>
-                    <li>Email: lenindpulgar@gmail.com</li>
-                    {/* <li>Phone: +1 (800) 123-4567</li> */}
-                    <li>LinkedIn: https://www.linkedin.com/in/lenin-pb</li>
-                    <li>Github: https://github.com/leninpulgar</li>
+                  <li>Email: lenin.dev90gmail.com</li>
+                  {/* <li>Phone: +1 (800) 123-4567</li> */}
+                  <li>LinkedIn: https://www.linkedin.com/in/lenin-pb</li>
+                  <li>Github: https://github.com/leninpulgar</li>
                 </ul>
-                </div>
+              </div>
             </div>
 
             {/* 2/3 (col 2 y 3 de 3) */}
             <div className="md:col-span-2">
-                <ContactForm className="w-full" />
+              <ContactForm className="w-full" />
             </div>
-            </div>
+          </div>
 
 
-          
+
         </div>
       </div>
-      
+
     </div>
   );
 };

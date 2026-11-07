@@ -40,7 +40,7 @@ export default function Contact() {
                 Feel free to reach out directly via email or connect with me on LinkedIn. I&apos;m always eager to leverage my expertise in ReactJS, Next.js, Node.js, and comprehensive UI/UX design to create impactful digital solutions.
                 <br />
                 <br />
-                Email: <a href="mailto:lenindpulgar@gmail.com" className="hover:underline">lenindpulgar@gmail.com</a>
+                Email: <a href="mailto:lenin.dev90@gmail.com" className="hover:underline">lenin.dev90@gmail.com</a>
                 <br />
                 {/* Phone: 
                 <br /> */}
