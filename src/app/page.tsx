@@ -1,5 +1,6 @@
 import { FlipWords } from "@/components/ui/flip-words";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import { CurrentDate } from "@/components/CurrentDate";
 
 
 
@@ -56,7 +57,7 @@ export default function Home() {
             <rect x="10" y="11" width="2" height="2" fill="currentColor" />
             <rect x="12" y="11" width="2" height="2" fill="currentColor" />
             <rect x="14" y="11" width="2" height="2" fill="currentColor" />
-            
+
             <rect x="13" y="7" width="2" height="2" fill="currentColor" />
             <rect x="15" y="9" width="2" height="2" fill="currentColor" />
             <rect x="17" y="11" width="2" height="2" fill="currentColor" />
@@ -86,7 +87,7 @@ export default function Home() {
         </div>
       </main>
 
-      
+
 
       <footer className="w-full p-8 flex justify-between items-end">
         <div className="text-lg">
@@ -94,13 +95,8 @@ export default function Home() {
           <p>CREATIVITY</p> */}
         </div>
         <div className="text-right">
-          <p className="text-6xl md:text-8xl font-mono">
-            {Date().split(" ")[2]}
-          </p>
-          <p className="text-lg md:text-xl">
-            {Date().split(" ")[1]}
-          </p>
-          <p className="text-sm">NOICE!</p>
+          <CurrentDate />
+          {/* <p className="text-sm">NOICE!</p> */}
           {/* <p className="text-sm">available for work</p> */}
         </div>
       </footer>
